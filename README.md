@@ -15,11 +15,13 @@ and the expected basic built in go types.
 gen is based/inspired by the work of Seth Shelnutt's [db2struct](https://github.com/Shelnutt2/db2struct), and Db2Struct is based/inspired by the work of ChimeraCoder's gojson package [gojson](https://github.com/ChimeraCoder/gojson).
 
 
+## support --form
+
 ## Usage
 
 ```BASH
 go get github.com/jlzan1314/gen
-gen --connstr "root@tcp(127.0.0.1:3306)/employees?&parseTime=True" --database employees  --json --gorm --guregu --rest
+gen --connstr "root@tcp(127.0.0.1:3306)/employees?&parseTime=True" --database employees  --json --gorm --form --guregu --rest
 ```
 
 ## Supported Databases
