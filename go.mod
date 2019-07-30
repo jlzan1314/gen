@@ -1,4 +1,4 @@
-module github.com/smallnest/gen
+module github.com/jlzan1314/gen
 
 go 1.12
 
