@@ -85,9 +85,9 @@ const (
 )
 
 // GenerateStruct generates a struct for the given table.
-func GenerateStruct(db *sql.DB, tableName string, structName string, pkgName string, jsonAnnotation bool, gormAnnotation bool, gureguTypes bool,formAnnotation bool) *ModelInfo {
+func GenerateStruct(db *sql.DB, tableName string, structName string, pkgName string, jsonAnnotation bool, gormAnnotation bool, gureguTypes bool, formAnnotation bool) *ModelInfo {
 	cols, _ := schema.Table(db, tableName)
-	fields := generateFieldsTypes(db, cols, 0, jsonAnnotation, gormAnnotation, gureguTypes,formAnnotation)
+	fields := generateFieldsTypes(db, cols, 0, jsonAnnotation, gormAnnotation, gureguTypes, formAnnotation)
 
 	//fields := generateMysqlTypes(db, columnTypes, 0, jsonAnnotation, gormAnnotation, gureguTypes)
 
@@ -103,7 +103,7 @@ func GenerateStruct(db *sql.DB, tableName string, structName string, pkgName str
 }
 
 // Generate fields string
-func generateFieldsTypes(db *sql.DB, columns []*sql.ColumnType, depth int, jsonAnnotation bool, gormAnnotation bool, gureguTypes bool,formAnnotation) []string {
+func generateFieldsTypes(db *sql.DB, columns []*sql.ColumnType, depth int, jsonAnnotation bool, gormAnnotation bool, gureguTypes bool, formAnnotation bool) []string {
 
 	//sort.Strings(keys)
 
